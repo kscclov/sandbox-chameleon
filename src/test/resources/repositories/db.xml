@@ -7,9 +7,8 @@
         </Params>
     </Connection>
     <Query name="Добавление продукта"
-           statement="INSERT INTO FOOD(food_id, food_name, food_type, food_exotic) values(:food_id, :food_name, :food_type, :food_exotic)">
+           statement="INSERT INTO FOOD(food_name, food_type, food_exotic) values(:food_name, :food_type, :food_exotic)">
         <Params>
-            <FieldInteger name="ID" locator="food_id"/>
             <FieldString name="Наименование" locator="food_name"/>
             <FieldString name="Тип" locator="food_type"/>
             <FieldNumber name="Экзотика" locator="food_exotic"/>
@@ -17,12 +16,18 @@
     </Query>
     <Query name="Удаление продукта" statement="DELETE FROM food WHERE FOOD_ID = 5">
     </Query>
-    <Query name="Список продуктов" statement="select * from FOOD order by food_id">
+    <Query name="Список продуктов" statement="select food_name, food_type, food_exotic from FOOD">
         <Result>
-            <FieldInteger locator="food_id" name="ID"/>
             <FieldString name="Наименование" locator="food_name"/>
             <FieldString name="Тип" locator="food_type"/>
             <FieldNumber name="Экзотика" locator="food_exotic"/>
+        </Result>
+    </Query>
+    <Query name="Добавленный продукт"
+           statement="SELECT * FROM FOOD WHERE food_name = '#{Наименование}' AND food_type = '#{Тип}';">
+        <Result>
+            <FieldString name="Наименование" locator="food_name"/>
+            <FieldString name="Тип" locator="food_type"/>
         </Result>
     </Query>
 </DbGears>
