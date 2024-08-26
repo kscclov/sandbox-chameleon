@@ -6,6 +6,6 @@
     </parameter>
     <parameter>
         <key>applicationUrl (Адрес приложения)</key>
-        <value>https://qualit.appline.ru/food</value>
+        <value>http://localhost:8080/food</value>
     </parameter>
 </environment>

@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"3768184658cbbda1b0b8c83d9c04c7c0","name":"Добавление товара","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
+{"total":1,"items":[{"uid":"fb0d36525f768970748b20d0d3c7d502","name":"Добавление нового товара в БД","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
